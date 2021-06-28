@@ -1,6 +1,7 @@
 package com.leetcode.solutions;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Map;
 
 /**
  * 
@@ -57,6 +58,20 @@ public class TwoSum {
 			}
 			return output;
 		}
+		
+		/**Improved Answer**/
+		
+		public int[] twoSum2(int[] nums, int target) {
+	        Map<Integer,Integer> map = new HashMap<>();
+	        int len = nums.length; 
+	        for(int i =0; i< len;i++){
+	            if(map.containsKey(target-nums[i])){
+	                return new int[] {map.get(target-nums[i]),i};
+	            }
+	                map.put(nums[i],i);
+	        }
+	        throw new IllegalArgumentException("No two sum solution");
+	    }
 
 	}
 

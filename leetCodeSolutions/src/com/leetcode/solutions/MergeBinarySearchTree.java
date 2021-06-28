@@ -24,7 +24,7 @@ import java.util.PriorityQueue;
 
 public class MergeBinarySearchTree {
 
-	public List<Integer> getAllElements(TreeNode root1, TreeNode root2) {
+	public static List<Integer> getAllElements(TreeNode root1, TreeNode root2) {
 		if (root1 == null && root2 == null) {
 			return null;
 		}
@@ -60,6 +60,9 @@ public class MergeBinarySearchTree {
 		TreeNode tree2 = new TreeNode(1);
 		tree2.left = new TreeNode(0);
 		tree2.right = new TreeNode(3);
+		
+		getAllElements(tree1,tree2);
+		
 	}
 
 	// Definition for a binary tree node.

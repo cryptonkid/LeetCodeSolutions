@@ -9,7 +9,17 @@ import java.util.List;
  * @author viveksingh
  *
  */
-
+/**
+ * This logic works with the inputs in the order 
+ * [1,2,3],
+ 	[4,5],
+ * this logic fails when we have inputs in the order 
+ * [1,2,3],
+ [4,5],
+ [1,2,3]
+ * @author viveksingh
+ *
+ */
 public class MaximumDistanceInArray {
 	public static int maxDistance(List<List<Integer>> arrays) {
         int globalMax = Integer.MIN_VALUE, globalMin = Integer.MAX_VALUE;// rather than keeping it zero.
