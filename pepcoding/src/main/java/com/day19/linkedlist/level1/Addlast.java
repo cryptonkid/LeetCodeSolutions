@@ -7,32 +7,23 @@ public class Addlast {
         public static class Node {
             int data;
             Node next;
-//Add as constructor was not defined.
-            public Node(int val) {
-                this.data = val;
-                next = null;
-            }
         }
 
         public static class LinkedList {
             Node head;
             Node tail;
             int size;
-            //Add as constructor was not defined.
-            public LinkedList(){
-                head = null;
-                tail = null;
-                size = 0;
-            }
+
             void addLast(int val) {
+                Node temp = new Node();
+                temp.data = val;
+                temp.next = null;
                 if(head == null && tail == null){
-                    Node temp = new Node(val);
-                    head = temp;
-                    tail = head;
+                    head = tail = temp;
                 }
                 else if(tail!= null){
-                    tail.next = new Node(val);
-                    tail = tail.next;
+                    tail.next = temp;
+                    tail = temp;
                 }
                 size++;
             }
@@ -63,5 +54,4 @@ public class Addlast {
 
             testList(list);
         }
-    }
 }
